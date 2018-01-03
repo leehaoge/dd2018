@@ -10,3 +10,12 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.dd-call-car {
+    width: 94%;
+    position: fixed;
+    left: 3%;
+    bottom: 10px;
+    min-height: 150px;
+    border: solid 1px #EEE;
+}
