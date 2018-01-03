@@ -19,3 +19,7 @@
     min-height: 150px;
     border: solid 1px #EEE;
 }
+
+.page-img img {
+    width: 100%;
+}

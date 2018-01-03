@@ -1,10 +1,12 @@
-define(['text!html/main.html', 'core/fragment'], function(tpl, Fragment) {
+define(['text!html/main.html', 'core/fragment', 'app'], function(tpl, Fragment, APP) {
     'use strict';
 
     var module;
 
     function moduleLoaded() {
-
+        $('#ln-where-start').click(function() {
+            APP.navigate('where-start');
+        });
     }
 
     module = {

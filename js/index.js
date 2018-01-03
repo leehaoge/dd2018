@@ -7,11 +7,13 @@ require.config({
     }
 });
 
-require(['app', 'app-main'], function(APP, appMain) {
+require(['app', 'routes'], function(APP, routes) {
     'use strict';
 
+    APP.navigate = routes.navigate;
+
     var showAppMain = function() {
-        appMain.show(document.getElementById('page-wrapper'));
+        APP.navigate('main');
     };
 
     window.setTimeout(showAppMain, 2000);
