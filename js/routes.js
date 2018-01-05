@@ -1,5 +1,5 @@
-define(['where-start', 'app-main'],
-    function (pgStart, pgMain) {
+define(['where-start', 'where-target', 'psngr-main'],
+    function (pgStart, pgTarget, pPsngrMain) {
         'use strict';
 
         var PAGE_EL = 'page-wrapper',
@@ -10,8 +10,11 @@ define(['where-start', 'app-main'],
                 "where-start": function (config, cb) {
                     pgStart.show(getPageEl(), config, cb);
                 },
+                "where-target": function (config, cb) {
+                    pgTarget.show(getPageEl(), config, cb);
+                },
                 "main": function (config, cb) {
-                    pgMain.show(getPageEl(), config, cb);
+                    pPsngrMain.show(getPageEl(), config, cb);
                 },
                 _extraRoutes: []
             };
@@ -20,8 +23,8 @@ define(['where-start', 'app-main'],
             var func;
             if (pages[page]) func = pages[page];
             if (!!!func) {
-                for (var i in _extraRoutes) {
-                    var route = _extraRoutes[i];
+                for (var i in pages._extraRoutes) {
+                    var route = pages._extraRoutes[i];
                     if (route[page]) func = route[page];
                     break;
                 }

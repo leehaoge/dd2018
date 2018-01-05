@@ -1,4 +1,4 @@
-define(['text!html/start.html', 'core/fragment', 'app/dd-app'], function (tpl, Fragment, APP) {
+define(['text!html/target.html', 'core/fragment', 'app/dd-app'], function (tpl, Fragment, APP) {
     'use strict';
 
     var module;
@@ -8,8 +8,8 @@ define(['text!html/start.html', 'core/fragment', 'app/dd-app'], function (tpl, F
             APP.navigate('main');
         });
         $('#btn-ok').click(function() {
-            var start = $('#ed-start').val();
-            APP.navigate('main', {start: start});
+            var target = $('#ed-target').val();
+            APP.navigate('main', {target: target});
         });
     }
 

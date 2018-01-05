@@ -1,24 +1,47 @@
 <div id="app-header" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="left">
         <ul>
-            <li><a href="#" data-icon="user" >&nbsp;</a></li>
-            <li><a href="#" class="ui-btn-active" >快车</a></li>
-            <li><a href="#" >&nbsp;</a></li>
-            <li><a href="#" >&nbsp;</a></li>
-            <li><a href="#" >&nbsp;</a></li>
+            <li>
+                <a href="#" data-icon="user">&nbsp;</a>
+            </li>
+            <li>
+                <a href="#" class="ui-btn-active">快车</a>
+            </li>
+            <li>
+                <a href="#">&nbsp;</a>
+            </li>
+            <li>
+                <a href="#">&nbsp;</a>
+            </li>
+            <li>
+                <a href="#">&nbsp;</a>
+            </li>
 
         </ul>
 
     </div>
 </div>
-<div id="app-main" role="main" data-position="fixed" >
+<div id="app-main" role="main" data-position="fixed">
     <div id="main-wrapper">
         <h1>[地图]</h1>
         <div class="dd-call-car">
             <ul>
-                <li><a href="#" id="ln-where-start">你在哪上车</a></li>
-                <li>你要去哪儿</li>
+                <li>
+                    <span id="el-where-start">
+                        <a href="#" id="ln-where-start">你在哪上车</a>
+                    </span>
+                </li>
+                <li>
+                    <span id="el-where-target">
+                        <a href="#" id="ln-where-target">你要去哪儿</a>
+                    </span>
+                </li>
             </ul>
+            <div id="div-trip-price" class="center-text hidden">约
+                <span id="el-trip-price" class="dd-trip-price"></span>元</div>
+            <div id="div-trip-control" class="dd-div80 hidden">
+                <button>呼叫快车</button>
+            </div>
         </div>
     </div>
 </div>

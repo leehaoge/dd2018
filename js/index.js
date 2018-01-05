@@ -7,7 +7,7 @@ require.config({
     }
 });
 
-require(['app', 'routes'], function(APP, routes) {
+require(['app/dd-app', 'routes'], function(APP, routes) {
     'use strict';
 
     APP.navigate = routes.navigate;

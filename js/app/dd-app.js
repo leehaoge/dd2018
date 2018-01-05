@@ -4,8 +4,9 @@ define(['core/context'], function(context) {
     var application;
 
     
+    application = {
 
-
+    };
 
     return application;
 

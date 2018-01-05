@@ -23,3 +23,69 @@
 .page-img img {
     width: 100%;
 }
+
+.map-search {
+    position: fixed;
+    top: 2px;
+    min-height: 20px;
+    left: 4px;
+    right: 4px;
+    background-color: #fff;
+    border: solid 1px #eee;
+    font-size: 14px;
+    padding: 3px 6px;
+}
+
+.map-search>div {
+    padding: 3px 3px;
+}
+
+.map-target {
+    position: fixed;
+    bottom: 20px;
+    min-height: 30px;
+    left: 8px;
+    right: 8px;
+    background-color: #fff;
+    border: solid 1px #eee;
+    font-size: 14px;
+    padding: 4px 6px;
+}
+
+.map-target>div {
+    padding: 5px 3px;
+}
+
+.dd-panel-left {
+    display: inline-flex;
+}
+
+.dd-right-btn {
+    float: right;
+    min-width: 50px;
+}
+
+.dd-toast {
+    position: fixed;
+    z-index: 30000;
+    top: 45%;
+    left: 10%;
+    right: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.dd-div80 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
