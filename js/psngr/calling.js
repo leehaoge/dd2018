@@ -1,15 +1,15 @@
-define(['text!html/target.html', 'core/fragment', 'app/dd-app'], function (tpl, Fragment, APP) {
+define(['text!html/psngr/calling.html', 'core/fragment', 'app/dd-app'], function (tpl, Fragment, APP) {
     'use strict';
 
     var module;
 
     function moduleLoaded() {
         $('#btn-cancel').click(function() {
-            APP.navigate('main');
+            APP.navigate('psngr-main');
         });
         $('#btn-ok').click(function() {
-            var target = $('#ed-target').val();
-            APP.navigate('main', {target: target});
+            var start = $('#ed-start').val();
+            APP.navigate('psngr-main', {start: start});
         });
     }
 

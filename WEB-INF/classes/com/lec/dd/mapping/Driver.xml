@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lec.dd.dao.DriverDao">
+
+	<resultMap type="Driver" id="driverList">
+		<id column="id" property="id" />
+		<result column="account" property="account" />
+		<result column="name" property="name" />
+		<result column="password" property="password" />
+		<result column="phone" property="phone" />
+		<result column="bland" property="bland" />
+		<result column="model" property="model" />
+		<result column="plate" property="plate" />
+		<result column="reg_date" property="regDate" />
+		<result column="state" property="state" />
+	</resultMap>
+
+	<select id="isPhoneExists" parameterType="string" resultType="boolean">
+		<![CDATA[ 
+		SELECT COUNT(id) > 0 FROM dd_driver WHERE phone = #{phone} AND state <> 9 
+		]]>		
+	</select>
+	
+	<select id="selectByPhone" parameterType="string" resultMap="driverList">
+		<![CDATA[ 
+		SELECT * FROM dd_driver WHERE phone = #{phone} AND state <> 9 
+		]]>		
+	</select>
+
+	<insert id="insert" parameterType="Driver"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO dd_driver
+		(id,account,password,name,phone,bland,model,plate,reg_date,state)
+		VALUES
+		(#{id},#{account},#{password},#{name},#{phone},#{bland},#{model},#{plate},#{regDate},#{state})
+	</insert>	
+	
+</mapper>

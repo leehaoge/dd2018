@@ -1,5 +1,5 @@
-define(['where-start', 'where-target', 'psngr-main'],
-    function (pgStart, pgTarget, pPsngrMain) {
+define(['psngr/routes'],
+    function (psngrRoutes) {
         'use strict';
 
         var PAGE_EL = 'page-wrapper',
@@ -7,16 +7,12 @@ define(['where-start', 'where-target', 'psngr-main'],
                 return document.getElementById(PAGE_EL);
             },
             pages = {
-                "where-start": function (config, cb) {
-                    pgStart.show(getPageEl(), config, cb);
-                },
-                "where-target": function (config, cb) {
-                    pgTarget.show(getPageEl(), config, cb);
-                },
-                "main": function (config, cb) {
-                    pPsngrMain.show(getPageEl(), config, cb);
-                },
-                _extraRoutes: []
+                // "main": function (config, cb) {
+                //     pPsngrMain.show(getPageEl(), config, cb);
+                // },
+                _extraRoutes: [
+                    psngrRoutes
+                ]
             };
 
         function navigatePage(page, config, cb) {

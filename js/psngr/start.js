@@ -1,15 +1,15 @@
-define(['text!html/start.html', 'core/fragment', 'app/dd-app'], function (tpl, Fragment, APP) {
+define(['text!html/psngr/start.html', 'core/fragment', 'app/dd-app'], function (tpl, Fragment, APP) {
     'use strict';
 
     var module;
 
     function moduleLoaded() {
         $('#btn-cancel').click(function() {
-            APP.navigate('main');
+            APP.navigate('psngr-main');
         });
         $('#btn-ok').click(function() {
             var start = $('#ed-start').val();
-            APP.navigate('main', {start: start});
+            APP.navigate('psngr-main', {start: start});
         });
     }
 

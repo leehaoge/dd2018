@@ -23,15 +23,17 @@
 </div>
 <div id="app-main" role="main" data-position="fixed">
     <div id="main-wrapper">
-        <h1>[地图]</h1>
+        <div id="map" class="dd-map">
+
+        </div>
         <div class="dd-call-car">
             <ul>
-                <li>
+                <li class="dd-location" data-id="where-start">
                     <span id="el-where-start">
                         <a href="#" id="ln-where-start">你在哪上车</a>
                     </span>
                 </li>
-                <li>
+                <li class="dd-location" data-id="where-target">
                     <span id="el-where-target">
                         <a href="#" id="ln-where-target">你要去哪儿</a>
                     </span>
@@ -40,7 +42,24 @@
             <div id="div-trip-price" class="center-text hidden">约
                 <span id="el-trip-price" class="dd-trip-price"></span>元</div>
             <div id="div-trip-control" class="dd-div80 hidden">
-                <button>呼叫快车</button>
+                <button id="btn-calling">呼叫快车</button>
+            </div>
+        </div>
+        <div class="dd-poi-search" id="poi-search">
+            <div class="dd-poi-header">
+                <div class="dd-citi-sel"><span id="dd-location">深圳</span></div>
+                <input data-role="none" id="dd-poi-keyword">
+                <div class="dd-right-btn"><button data-role="none" id="poi-cancel">取消</button></div>
+            </div>
+            <div class="dd-poi-content" id="poi-panel">
+                <div id="scroller">
+                    <div id="poi-list">
+
+                    </div>
+                    <div id="pullUp" class="center-text">
+                        <span class="pullUpLabel">加载更多结果</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
